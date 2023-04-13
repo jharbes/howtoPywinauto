@@ -11,3 +11,6 @@ formatMenu.click_input()
 print('-----------------------------')
 
 notepad.UntitledNotepad.print_control_identifiers()
+
+# ctrl+a + backspace (para apagar o que está escrito no campo)
+# nameBox.type_keys('^a{BACKSPACE}')
