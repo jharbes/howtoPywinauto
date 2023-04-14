@@ -5,12 +5,32 @@ from pywinauto.application import Application
 # podemos tambem startar o programa em um comando e depois nos conectarmos a ele com outro programa sem problema
 notepad=Application(backend='uia').start(r"C:\WINDOWS\system32\notepad.exe").connect(title='Untitled - Notepad',timeout=20)
 
+
 # o atributo utilizado 'UntitledNotepad' sera o titulo utilizado no comando para conectar ao app, retirando os espaços, retirando os caracteres especiais e colocando a primeira letra de cada palavra em maiuscula(?)
-notepad.UntitledNotepad.print_control_identifiers()
+# notepad.UntitledNotepad.print_control_identifiers()
 
 formatMenu=notepad.UntitledNotepad.child_window(title="Format", control_type="MenuItem")
 
 formatMenu.click_input()
+
+textEditor=notepad.UntitledNotepad.child_window(title="Text Editor", auto_id="15", control_type="Edit")
+
+textEditor.click_input()
+
+# preenche a edicao de texto, para que tenha espaços precvisa do with_spaces=True
+textEditor.type_keys('Testando a edição Jorge Harbes',with_spaces=True)
+
+fileMenu=notepad.UntitledNotepad.child_window(title="File", control_type="MenuItem")
+
+fileMenu.click_input()
+
+# observe que ao abrir o menu 'file' do notepad e imprimir novamente o print_control_identifiers() novas opcoes de itens irao aparecer que serao os subitens do menu 'file'
+notepad.UntitledNotepad.print_control_identifiers()
+
+# sendo assim poderemos agora clicar no 'page setup...' por exemplo que é um subitem de 'file', mas isso só é possivel após abrir a aba 'file'
+notepad.UntitledNotepad.child_window(title="Page Setup...", auto_id="5", control_type="MenuItem").click_input()
+
+
 
 print('-----------------------------')
 
