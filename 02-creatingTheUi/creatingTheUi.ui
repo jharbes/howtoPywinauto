@@ -60,7 +60,7 @@ border-radius:15px;</string>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QPushButton" name="maxBtn">
+     <widget class="QPushButton" name="closeBtn">
       <property name="geometry">
        <rect>
         <x>733</x>
@@ -178,7 +178,7 @@ QPushButton:hover{
       </property>
      </column>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="saveBtn">
      <property name="geometry">
       <rect>
        <x>654</x>
@@ -202,7 +202,7 @@ QPushButton:hover{
       <string>Save</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QPushButton" name="addBtn">
      <property name="geometry">
       <rect>
        <x>530</x>
