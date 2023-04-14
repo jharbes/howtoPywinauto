@@ -1,3 +1,9 @@
+"""
+Tutorial pywinauto baseado no video do youtube:
+https://www.youtube.com/watch?v=R4E4IOIC63s&list=WL&index=8&t=6s
+"""
+
+
 from pywinauto.application import Application
 
 # podemos usar apenas o metodo connect para nos conectarmos a algum programa que já esteja aberto, sem que tenha sido o python que o iniciou
