@@ -1,7 +1,11 @@
 from pywinauto.application import Application
 
+# podemos usar apenas o metodo connect para nos conectarmos a algum programa que já esteja aberto, sem que tenha sido o python que o iniciou
+# o timeout faz com que o comando aguarde aquele tempo para se conectar ao aplicativo ou quebra o programa
+# podemos tambem startar o programa em um comando e depois nos conectarmos a ele com outro programa sem problema
 notepad=Application(backend='uia').start(r"C:\WINDOWS\system32\notepad.exe").connect(title='Untitled - Notepad',timeout=20)
 
+# o atributo utilizado 'UntitledNotepad' sera o titulo utilizado no comando para conectar ao app, retirando os espaços, retirando os caracteres especiais e colocando a primeira letra de cada palavra em maiuscula(?)
 notepad.UntitledNotepad.print_control_identifiers()
 
 formatMenu=notepad.UntitledNotepad.child_window(title="Format", control_type="MenuItem")
