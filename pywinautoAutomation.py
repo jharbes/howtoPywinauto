@@ -42,6 +42,8 @@ print('-----------------------------')
 
 notepad.UntitledNotepad.print_control_identifiers()
 
+notepad.UntitledNotepad.child_window(title="Cancel", auto_id="2", control_type="Button").click_input()
+
 # ctrl+a + backspace (para apagar o que está escrito no campo)
 # nameBox.type_keys('^a{BACKSPACE}')
 
