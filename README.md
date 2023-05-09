@@ -1,3 +1,5 @@
+<img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" align="right" width="110">
+
 # howtoPywinauto
  
 <h3>howtoPywinauto</h3>
